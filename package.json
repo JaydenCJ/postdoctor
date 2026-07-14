@@ -1,0 +1,61 @@
+{
+  "name": "postdoctor",
+  "version": "0.1.0",
+  "description": "Deliverability doctor for self-hosted email: SPF/DKIM/DMARC/rDNS/MTA-STS checks, DNS record generation and diff, DMARC report translation, continuous monitoring with alerts.",
+  "license": "MIT",
+  "author": "JaydenCJ",
+  "type": "module",
+  "bin": {
+    "postdoctor": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "keywords": [
+    "email",
+    "deliverability",
+    "spf",
+    "dkim",
+    "dmarc",
+    "mta-sts",
+    "rdns",
+    "dnsbl",
+    "self-hosted",
+    "cli"
+  ],
+  "dependencies": {
+    "commander": "^12.1.0",
+    "fast-xml-parser": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "vitest": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenCJ/postdoctor.git"
+  },
+  "homepage": "https://github.com/JaydenCJ/postdoctor#readme",
+  "bugs": {
+    "url": "https://github.com/JaydenCJ/postdoctor/issues"
+  }
+}
